@@ -48,6 +48,9 @@ int renf_elem_cmp_fmpq(renf_elem_t a, const fmpq_t b, renf_t nf)
     if (fmpq_is_zero(b))
         return renf_elem_sgn(a, nf);
 
+    if (nf_elem_is_zero(a->elem, nf->nf))
+        return -fmpq_sgn(b);
+
     if (nf_elem_is_rational(a->elem, nf->nf))
     {
         if (nf->nf->flag & NF_LINEAR)
