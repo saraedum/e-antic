@@ -16,6 +16,7 @@
 #ifndef E_ANTIC_RENF_ELEM_CLASS_HPP
 #define E_ANTIC_RENF_ELEM_CLASS_HPP
 
+#include <type_traits>
 #include <gmpxx.h>
 #include <boost/operators.hpp>
 #include <flint/fmpq.h>
